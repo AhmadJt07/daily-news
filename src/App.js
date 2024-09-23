@@ -1,11 +1,11 @@
-import "./App.css";
-import Navbar from "./Components/Navbar";
-import News from "./Components/News";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import './App.css';
+import Navbar from './Components/Navbar';
+import News from './Components/News';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
   let pagesize = 3;
-  let country = "us";
+  let country = 'us';
   return (
     <>
       <Router>

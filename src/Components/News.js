@@ -1,8 +1,8 @@
-import { useEffect, useState } from "react";
-import NewsItem from "./NewsItem";
-import Spinner from "./Spinner";
-import PropTypes from "prop-types";
-import InfiniteScroll from "react-infinite-scroll-component";
+import { useEffect, useState } from 'react';
+import NewsItem from './NewsItem';
+import Spinner from './Spinner';
+import PropTypes from 'prop-types';
+import InfiniteScroll from 'react-infinite-scroll-component';
 
 const News = (props) => {
   const [data, setData] = useState([]);
@@ -63,18 +63,18 @@ const News = (props) => {
 
   return (
     <>
-      <h1 className="text-center" style={{ marginTop: "80px" }}>
+      <h1 className="text-center" style={{ marginTop: '80px' }}>
         Daily News - Top {capitalizedFirstLetter(props.category)} Headlines.
       </h1>
 
       {loading && <Spinner />}
       <div>
         <InfiniteScroll
-          style={{ overflow: "hidden" }}
+          style={{ overflow: 'hidden' }}
           dataLength={data.length}
           next={fetchMoreData}
           hasMore={data.length !== totalResults}
-          loader={<Spinner />}
+          // loader={<Spinner />}
         >
           <div className="container my-3">
             <div className="row ">
@@ -125,7 +125,7 @@ News.prototype = {
   category: PropTypes.string,
 };
 News.prototype = {
-  default: { country: "in", pagesize: 9, category: "general" },
+  default: { country: 'in', pagesize: 9, category: 'general' },
 };
 
 export default News;
